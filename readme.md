@@ -1,6 +1,7 @@
-Pwd: /home/ec2-user/k3s/docker
-mkdir certs
-cd certs
+### setup keycloak https with docker-compose
+- Pwd: /home/ec2-user/k3s/docker
+- mkdir certs
+- cd certs
  
 ### generate selfcert keypair with public & private key: keycloak.key and keycloak.crt
 openssl req -newkey rsa:2048 -nodes   -keyout keycloak.key  -x509 -days 365 -out keycloak.crt   -subj "/CN=IP_PUBLIC"   -addext "subjectAltName=IP:IP_PUBLIC,DNS:localhost"
